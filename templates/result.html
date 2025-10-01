@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trip Plan Result</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🌍 Trip Plan for {{ deps.user_name }}</h1>
+    <p><strong>From:</strong> {{ ctx.from_city }} → <strong>Destination:</strong> {{ ctx.destination }}</p>
+    <p><strong>Arrival Time:</strong> {{ ctx.arrival_time }}</p>
+
+    <h2>🏨 Hotel Recommendation</h2>
+    <p>{{ ctx.hotel_name }} ({{ ctx.hotel_stars }}★) - {{ ctx.hotel_location }}<br>
+    Price: ${{ ctx.hotel_price }}/night</p>
+
+    <h2>🎯 Suggested Activities</h2>
+    <ul>
+      {% for activity in ctx.activities %}
+      <li>{{ activity }}</li>
+      {% endfor %}
+    </ul>
+
+    <a href="/">⬅️ Plan Another Trip</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Travel Planner</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>✈️ AI Travel Planner</h1>
+    <form action="/plan" method="post">
+      <label>Your Name:</label>
+      <input type="text" name="user_name" required>
+      <label>Origin City:</label>
+      <input type="text" name="origin_city" required>
+      <label>What kind of trip do you want?</label>
+      <textarea name="preferences" rows="4" required></textarea>
+      <button type="submit">Plan My Trip</button>
+    </form>
+  </div>
+</body>
+</html>
